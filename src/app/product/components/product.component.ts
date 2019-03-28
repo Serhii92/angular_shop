@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductCategories } from '../enums/product-categories';
+import { ProductsService } from '../products.service';
+import { Product } from '../models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -15,9 +17,18 @@ export class ProductComponent implements OnInit {
   category: ProductCategories = ProductCategories.Computers;
   categories: ProductCategories;
 
-  constructor() { }
+  products: Array<Product>;
+
+  constructor(
+    private productsService: ProductsService
+  ) { }
 
   ngOnInit() {
+    this.products = this.productsService.getProducts();
+  }
+
+  onBuy(event: any): void {
+    console.log('On buy click:', event);
   }
 
 }
