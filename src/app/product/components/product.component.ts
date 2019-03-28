@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductCategories } from '../enums/product-categories';
 import { ProductsService } from '../products.service';
 import { Product } from '../models/product.model';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product',
@@ -20,15 +21,18 @@ export class ProductComponent implements OnInit {
   products: Array<Product>;
 
   constructor(
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private cartService: CartService
   ) { }
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
   }
 
-  onBuy(event: any): void {
-    console.log('On buy click:', event);
+  onBuy(product: Product): void {
+    console.log('On buy click:', product);
+    this.cartService.addToCart(product)
+
   }
 
 }
