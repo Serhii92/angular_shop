@@ -8,10 +8,10 @@ export class Product {
         public isAvailable,
         public category: ProductCategories
     ) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.isAvailable = isAvailable;
-        this.category = category;
+        name;
+        description;
+        price;
+        isAvailable;
+        category;
     }
 }

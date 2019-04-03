@@ -1,9 +1,9 @@
 export enum ProductCategories {
-    Automotive,
-    Books,
-    Computers,
-    Electronics,
-    Health,
-    Sports,
-    Software
+    Automotive = 'Automotive',
+    Books = 'Books',
+    Computers = 'Computers',
+    Electronics = 'Electronics',
+    Health = 'Health',
+    Sports = 'Sports',
+    Software = 'Software'
 }
