@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/components/product.component';
-import { CartComponent } from './product/components/cart/cart.component';
+import { CartModule } from './product/components/cart/cart.module';
+import { ProductsModule } from './product/components/products/products.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent,
-    CartComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CartModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
