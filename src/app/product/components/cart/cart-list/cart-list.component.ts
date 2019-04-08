@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { CartService } from '../../../cart.service';
 import { Product } from '../../../models/product.model';
 
@@ -12,7 +12,7 @@ export class CartListComponent implements OnInit {
   cartItems: Array<Product>;
 
   constructor(
-    private cartService: CartService
+    public cartService: CartService
   ) { }
 
   ngOnInit() {
