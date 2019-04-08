@@ -29,11 +29,19 @@ export class CartService {
     this.getCountAndTotal();
   }
 
+  updateProduct(product: Product) {
+    let line = this.productsFromCart.find(item => item == product);
+    if (line != undefined) {
+        line.quantity = Number(product.quantity);
+    }
+    this.getCountAndTotal();
+  }
+
   getCountAndTotal(): void {
     this.itemsCount = this.productsFromCart.length;;
     this.totalPrice = 0;
     this.productsFromCart.forEach(l => {
-      this.totalPrice += (1 * l.price);
+      this.totalPrice += (l.quantity * l.price);
     })
   }
 }

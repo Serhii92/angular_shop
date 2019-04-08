@@ -24,4 +24,9 @@ export class CartListComponent implements OnInit {
     this.cartService.removeProductFromCart(product)
   }
 
+  onChangeQuantity(product: Product): void {
+    console.log('On update click:', product);
+    this.cartService.updateProduct(product)
+  }
+
 }
