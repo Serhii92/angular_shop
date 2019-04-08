@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{cartItem.name}} - {{cartItem.description}}</div>
+  <div class="panel-body">
+    <ul>
+      <li>Category: {{cartItem.category}}</li>
+      <li>Price: {{cartItem.price}}</li>
+    </ul>
+    <button class="btn btn-primary" (click)="onRemove(cartItem)">Remove</button>
+  </div>
+</div>

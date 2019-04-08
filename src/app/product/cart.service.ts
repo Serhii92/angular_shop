@@ -17,4 +17,9 @@ export class CartService {
   getAddedProducts(): Array<Product> {
     return this.productsFromCart;
   }
+
+  removeProductFromCart(product: Product) {
+    const pos = this.productsFromCart.indexOf(product);
+      this.productsFromCart.splice(pos, 1);
+  }
 }

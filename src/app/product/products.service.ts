@@ -19,11 +19,13 @@ export class ProductsService {
       new Product
         ('Laptop1', 'Laptop1 description', 1000, true, ProductCategories.Computers),
       new Product
-        ('Book', 'Laptop2 description', 450, true, ProductCategories.Books),
+        ('Book', 'Laptop2 description', 450, false, ProductCategories.Books),
       new Product
         ('Laptop3', 'Laptop3 description', 600, true, ProductCategories.Computers),
       new Product
-        ('TV', 'Laptop description', 500, true, ProductCategories.Electronics)
+        ('TV', 'Laptop description', 500, true, ProductCategories.Electronics),
+        new Product
+        ('TV 2', 'TV description', 500, false, ProductCategories.Electronics)
     ]
   }
 }

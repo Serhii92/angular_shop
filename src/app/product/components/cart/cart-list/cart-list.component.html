@@ -1,14 +1,5 @@
-<div class="panel panel-default">
-    <div class="panel-heading">Cart</div>
-    <div class="panel-body">
-      <ul>
-        <li *ngFor="let product of cartProducts">
-          <ul>
-            <li>Name: {{product.name}}</li>
-            <li>Description: {{product.description}}</li>
-            <li>Price: {{product.price}}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
+<app-cart-item 
+    *ngFor="let cartItem of cartItems" 
+    [cartItem]="cartItem" 
+    (removeCartItem)="onRemoveItem($event)">
+</app-cart-item>

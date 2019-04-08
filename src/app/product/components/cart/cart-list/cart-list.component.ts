@@ -9,14 +9,19 @@ import { Product } from '../../../models/product.model';
 })
 export class CartListComponent implements OnInit {
 
-  cartProducts: Array<Product>;
+  cartItems: Array<Product>;
 
   constructor(
     private cartService: CartService
   ) { }
 
   ngOnInit() {
-    this.cartProducts = this.cartService.getAddedProducts();
+    this.cartItems = this.cartService.getAddedProducts();
+  }
+
+  onRemoveItem(product: Product): void {
+    console.log('On remove click:', product);
+    this.cartService.removeProductFromCart(product)
   }
 
 }
