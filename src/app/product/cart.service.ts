@@ -14,7 +14,8 @@ export class CartService {
   constructor() { }
 
   addToCart(product: Product) {
-    this.productsFromCart.push(product);
+    const cartItem = { ...product };
+    this.productsFromCart.push(cartItem);
     this.getCountAndTotal();
   }
 
@@ -32,7 +33,7 @@ export class CartService {
   updateProduct(product: Product) {
     let line = this.productsFromCart.find(item => item == product);
     if (line != undefined) {
-        line.quantity = Number(product.quantity);
+      line.quantity = Number(product.quantity);
     }
     this.getCountAndTotal();
   }
