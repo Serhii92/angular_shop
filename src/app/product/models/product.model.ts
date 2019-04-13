@@ -6,12 +6,9 @@ export class Product {
         public description: string,
         public price: number,
         public isAvailable,
-        public category: ProductCategories
+        public category: ProductCategories,
+        public quantity?: number
     ) {
-        name;
-        description;
-        price;
-        isAvailable;
-        category;
+        this.quantity = quantity || 1;
     }
 }

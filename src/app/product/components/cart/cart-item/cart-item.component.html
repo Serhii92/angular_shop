@@ -1,0 +1,12 @@
+<div class="panel panel-default" appCartItemStyle>
+  <div class="panel-heading" >{{cartItem.name}} - {{cartItem.description}} </div>
+  <div class="panel-body" >
+    <ul>
+      <li>Category: {{cartItem.category}}</li>
+      <li>Price: {{cartItem.price}}</li>
+      <li><input type="number" [value]="cartItem.quantity" name="quantity" (change)="onChangeQuantity(cartItem)">
+      </li>
+    </ul>
+    <button class="btn btn-primary" (click)="onRemove(cartItem)">Remove</button>
+  </div>
+</div>
