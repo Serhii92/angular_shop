@@ -6,8 +6,8 @@ import { Product } from './models/product.model';
 })
 export class CartService {
 
-  public itemsCount: number = 0;
-  public totalPrice: number = 0;
+  public itemsCount = 0;
+  public totalPrice = 0;
 
   productsFromCart = new Array<Product>();
 
@@ -31,18 +31,18 @@ export class CartService {
   }
 
   updateProduct(product: Product) {
-    let line = this.productsFromCart.find(item => item == product);
-    if (line != undefined) {
+    const line = this.productsFromCart.find(item => item === product);
+    if (line !== undefined) {
       line.quantity = Number(product.quantity);
     }
     this.getCountAndTotal();
   }
 
   getCountAndTotal(): void {
-    this.itemsCount = this.productsFromCart.length;;
+    this.itemsCount = this.productsFromCart.length;
     this.totalPrice = 0;
     this.productsFromCart.forEach(l => {
       this.totalPrice += (l.quantity * l.price);
-    })
+    });
   }
 }

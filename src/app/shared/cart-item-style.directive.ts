@@ -9,12 +9,12 @@ export class CartItemStyleDirective {
   backgroundColor: string;
 
   @HostListener('mouseenter') onMouseEnter() {
-    console.log("mouse enter");
+    console.log('mouse enter');
     this.backgroundColor = '#DDF3FD';
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    console.log("mouse leave");
+    console.log('mouse leave');
     this.backgroundColor = '#fff';
   }
 

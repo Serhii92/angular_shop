@@ -9,6 +9,6 @@ export class Product {
         public category: ProductCategories,
         public quantity?: number
     ) {
-        this.quantity = quantity || 1
+        this.quantity = quantity || 1;
     }
 }

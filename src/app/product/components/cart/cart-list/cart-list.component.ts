@@ -21,12 +21,12 @@ export class CartListComponent implements OnInit {
 
   onRemoveItem(product: Product): void {
     console.log('On remove click:', product);
-    this.cartService.removeProductFromCart(product)
+    this.cartService.removeProductFromCart(product);
   }
 
   onChangeQuantity(product: Product): void {
     console.log('On update click:', product);
-    this.cartService.updateProduct(product)
+    this.cartService.updateProduct(product);
   }
 
 }

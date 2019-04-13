@@ -26,6 +26,6 @@ export class ProductsService {
         ('TV', 'Laptop description', 500, true, ProductCategories.Electronics),
         new Product
         ('TV 2', 'TV description', 500, false, ProductCategories.Electronics)
-    ]
+    ];
   }
 }
