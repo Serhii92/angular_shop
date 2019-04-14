@@ -49,7 +49,7 @@ export class ContactUsComponent implements OnInit {
     console.log(JSON.stringify(this.configOptionsService.getConfig()));
   }
 
-  onSetNewConfigObject(obj: Object): void {
+  onSetNewConfigObject(obj: object): void {
     this.configOptionsService.setNewConfig(obj);
   }
 

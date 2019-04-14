@@ -12,6 +12,6 @@ import { SharedModule } from '../../../shared/shared.module';
     FormsModule,
     SharedModule
   ],
-  exports: [CartListComponent]
+  exports: [CartListComponent, SharedModule]
 })
 export class CartModule { }
