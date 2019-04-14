@@ -14,8 +14,8 @@ export class ProductsService {
       ('Laptop', 'Laptop description', 1000, true, ProductCategories.Computers);
   }
 
-  getProducts(): Array<Product> {
-    return [
+  getProducts(): Promise<Product[]> {
+    const products = [
       new Product
         ('Laptop1', 'Laptop1 description', 1000, true, ProductCategories.Computers),
       new Product
@@ -24,8 +24,11 @@ export class ProductsService {
         ('Laptop3', 'Laptop3 description', 600, true, ProductCategories.Computers),
       new Product
         ('TV', 'Laptop description', 500, true, ProductCategories.Electronics),
-        new Product
+      new Product
         ('TV 2', 'TV description', 500, false, ProductCategories.Electronics)
     ];
+
+    const promise = Promise.resolve(products);
+    return promise;
   }
 }
