@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CartModule } from './product/components/cart/cart.module';
 import { ProductsModule } from './product/components/products/products.module';
 import { FormsModule } from '@angular/forms';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     CartModule,
     ProductsModule,
-    FormsModule
+    FormsModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
