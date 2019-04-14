@@ -2,8 +2,8 @@
   <div class="panel-heading" >{{cartItem.name}} - {{cartItem.description}} </div>
   <div class="panel-body" >
     <ul>
-      <li>Category: {{cartItem.category}}</li>
-      <li>Price: {{cartItem.price}}</li>
+      <li>Category: {{cartItem.category | uppercase}}</li>
+      <li>Price: {{cartItem.price | currency:'USD'}}</li>
       <li><input type="number" [(ngModel)]="cartItem.quantity" name="quantity" (change)="onChangeQuantity(cartItem)">
       </li>
     </ul>
