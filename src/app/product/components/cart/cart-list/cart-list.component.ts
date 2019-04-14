@@ -16,7 +16,14 @@ export class CartListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.cartItems = this.cartService.getAddedProducts();
+  }
+
+  isCartEmpty(): boolean {
+    return this.cartService.isCartEmpty();
+  }
+
+  getProductsFromCart(): Product[] {
+    return this.cartService.getAddedProducts();
   }
 
   onRemoveItem(product: Product): void {
@@ -27,6 +34,10 @@ export class CartListComponent implements OnInit {
   onChangeQuantity(product: Product): void {
     console.log('On update click:', product);
     this.cartService.updateProduct(product);
+  }
+
+  onRemoveAll(): void {
+    this.cartService.removeAll();
   }
 
 }

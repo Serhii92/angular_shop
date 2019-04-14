@@ -27,6 +27,7 @@ export class CartItemComponent implements OnInit {
   }
 
   onChangeQuantity(product: Product): void {
+    console.log('Change qty:', product);
     this.changeQuantity.emit(this.cartItem);
   }
 

@@ -24,6 +24,10 @@ export class CartService {
     return this.productsFromCart;
   }
 
+  isCartEmpty(): boolean {
+    return !!this.productsFromCart.length;
+  }
+
   removeProductFromCart(product: Product) {
     const pos = this.productsFromCart.indexOf(product);
     this.productsFromCart.splice(pos, 1);
@@ -44,5 +48,10 @@ export class CartService {
     this.productsFromCart.forEach(l => {
       this.totalPrice += (l.quantity * l.price);
     });
+  }
+
+  removeAll(): void {
+    this.productsFromCart = [];
+    this.getCountAndTotal();
   }
 }

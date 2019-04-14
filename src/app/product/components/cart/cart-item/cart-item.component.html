@@ -4,7 +4,7 @@
     <ul>
       <li>Category: {{cartItem.category}}</li>
       <li>Price: {{cartItem.price}}</li>
-      <li><input type="number" [value]="cartItem.quantity" name="quantity" (change)="onChangeQuantity(cartItem)">
+      <li><input type="number" [(ngModel)]="cartItem.quantity" name="quantity" (change)="onChangeQuantity(cartItem)">
       </li>
     </ul>
     <button class="btn btn-primary" (click)="onRemove(cartItem)">Remove</button>

@@ -1,7 +1,14 @@
-<app-cart-item 
-    *ngFor="let cartItem of cartItems" 
-    [cartItem]="cartItem" 
-    (removeCartItem)="onRemoveItem($event)"
-    (changeQuantity)="onChangeQuantity($event)">
-</app-cart-item>
-<h3>Count: {{cartService.itemsCount}} Total Price: {{cartService.totalPrice}} </h3>
+<div *ngIf="isCartEmpty(); else emptyCart">
+    <app-cart-item *ngFor="let cartItem of getProductsFromCart()" 
+        [cartItem]="cartItem" 
+        (removeCartItem)="onRemoveItem($event)"
+        (changeQuantity)="onChangeQuantity($event)">
+    </app-cart-item>
+    <button class="btn btn-primary" (click)="onRemoveAll()">Remove All</button>
+    <h3>Count: {{cartService.itemsCount}} Total Price: {{cartService.totalPrice}} </h3>
+</div>
+<ng-template #emptyCart>
+    <h4>
+        Cart is empty
+    </h4>
+</ng-template>
