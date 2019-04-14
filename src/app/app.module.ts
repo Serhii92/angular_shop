@@ -7,10 +7,12 @@ import { CartModule } from './product/components/cart/cart.module';
 import { ProductsModule } from './product/components/products/products.module';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<section>
+  <div>
+    <p>Random value from GeneratorService: {{ randomValue }}</p>
+    <p>Application constants: {{ constantsService | json }}</p>
+  </div>
+  <div>
+    <h3>Local storage</h3>
+    Name for LocalStorageItem: <input type="text" [(ngModel)]="name">
+    Value for LocalStorageItem: <input type="text" [(ngModel)]="value">
+    <div>
+      <button type="button" class="btn btn-primary" (click)="onSaveToLocalStorage()">Save</button>
+      <button type="button" class="btn btn-primary" (click)="onRemoveFromLocalStorage()">Remove</button>
+    </div>
+  </div>
+
+  <div>
+    <h3>Config Options</h3>
+    <div>
+      Name for ConfigProperty: <input type="text" [(ngModel)]="configPropertyName">
+      Value for ConfigProperty: <input type="text" [(ngModel)]="configPropertyValue">
+      <div>
+        <button type="button" class="btn btn-primary" (click)="onShowConfigOptions()">Show</button>
+        <button type="button" class="btn btn-primary" (click)="onSetNewConfigObject(constantsService)">Set new</button>
+        <button type="button" class="btn btn-primary" (click)="onSetConfigProperty()">New config property</button>
+      </div>
+    </div>
+  </div>
+</section>
