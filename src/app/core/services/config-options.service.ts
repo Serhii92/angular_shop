@@ -6,7 +6,7 @@ import { CoreModule } from '../core.module';
 })
 export class ConfigOptionsService {
 
-  private config: Object = {
+  private config: object = {
     id: 1,
     login: 'Serhii',
     email: 'nizhnichenko92@gmail.com'
@@ -14,15 +14,15 @@ export class ConfigOptionsService {
 
   constructor() { }
 
-  getConfig(): Object {
+  getConfig(): object {
     return this.config;
   }
 
-  setNewConfig(config: Object): void {
+  setNewConfig(config: object): void {
     this.config = { ...config };
   }
 
-  modifyConfig(config: Object): void {
+  modifyConfig(config: object): void {
     this.config = { ...this.config, ...config };
   }
 
