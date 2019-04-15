@@ -1,22 +1,10 @@
-1. Создал:
- AppModule, 
-    - CartModule, 
-    - ProductsModule, 
-    - SharedModule
+Task 3
 
-2. Создал ProductListComponent, который делегирует отображение списка товаров
-   компоненту ProductComponent. 
-   getProducts() сервиса ProductService.
-   модель Product. 
-   Возможность добавления товара в корзину, если товар есть в наличии
-
-3. CartListComponent
-
-4. СartItemComponent
-
-5. CartService
-
-6. AppComponent элемент <h1 #appTitle></h1> с шаблонной переменной.
-
-7. При наведении мышки или клике на пункт списка (CartItem) стилизировать его изменением фона. 
-CartItemStyleDirective тут у меня небольшая проблема, использую HostBinding, HostListener, но не оно работает, не могу понять в чем причина
+1. Добавил логику для очситки корзины
+2. LocalStorageService
+3. ConfigOptionsService
+4. ConstantsService
+5. GeneratorService
+6. LocalStorageService, ConfigOptionsService, ConstantsService, GeneratorService зарегистрировал в CoreModule
+7. ContactUsComponent
+8. FonstSyleDirective (изменяет размер шрифта элемента по клику)
