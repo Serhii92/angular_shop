@@ -1,22 +1,11 @@
-1. Создал:
- AppModule, 
-    - CartModule, 
-    - ProductsModule, 
-    - SharedModule
+Task 4
 
-2. Создал ProductListComponent, который делегирует отображение списка товаров
-   компоненту ProductComponent. 
-   getProducts() сервиса ProductService.
-   модель Product. 
-   Возможность добавления товара в корзину, если товар есть в наличии
+1. Pipes на СartItemComponent, ProductComponent для форматирования цены, для форматирования категории в верхний регистр
 
-3. CartListComponent
+2. getProducts() сервиса ProductService возвращает промис
 
-4. СartItemComponent
+3. OrderByPipe для сортировки массива объектов, с параметрами:
+   - поле в виде строки
+   - булевый флаг, который определяет порядок сортировки
 
-5. CartService
-
-6. AppComponent элемент <h1 #appTitle></h1> с шаблонной переменной.
-
-7. При наведении мышки или клике на пункт списка (CartItem) стилизировать его изменением фона. 
-CartItemStyleDirective тут у меня небольшая проблема, использую HostBinding, HostListener, но не оно работает, не могу понять в чем причина
+4. OrderByPipe для сортировки айтемов в карте
