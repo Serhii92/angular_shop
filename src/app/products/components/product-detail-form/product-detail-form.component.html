@@ -7,5 +7,6 @@
       <li>Price: {{product.price | currency:'USD'}}</li>
     </ul>
     <button *ngIf = product.isAvailable class="btn btn-primary" (click)="onBuy(product)">Buy</button>
+    <button class="btn btn-primary" (click)="onGoBack()">Go Back</button>
   </div>
 </div>

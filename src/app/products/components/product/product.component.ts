@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { Product } from '../../../models/product.model';
+import { ProductModel } from '../../models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -10,10 +10,12 @@ import { Product } from '../../../models/product.model';
 export class ProductComponent implements OnInit {
 
   @Input()
-  product: Product;
+  product: ProductModel;
 
   @Output()
-  buyProduct: EventEmitter<Product> = new EventEmitter<Product>();
+  buyProduct: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
+  @Output()
+  productDetails: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
 
   constructor() { }
 
@@ -24,4 +26,9 @@ export class ProductComponent implements OnInit {
     this.buyProduct.emit(this.product);
   }
 
+  onDetails(): void {
+    this.productDetails.emit(this.product);
+  }
+
 }
+
