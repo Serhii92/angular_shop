@@ -10,6 +10,11 @@ import { Product } from '../../../models/product.model';
 export class CartListComponent implements OnInit {
 
   cartItems: Array<Product>;
+  orders = ['price', 'quantity', 'name'];
+  selectedOrder = 'price';
+
+  // directions = ['true', 'false'];
+  // direction = 'true';
 
   constructor(
     public cartService: CartService

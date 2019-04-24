@@ -14,8 +14,7 @@ export class CartService {
   constructor() { }
 
   addToCart(product: Product) {
-    const cartItem = { ...product };
-    this.productsFromCart.push(cartItem);
+    this.productsFromCart = [...this.productsFromCart, {...product}];
     this.getCountAndTotal();
   }
 
@@ -31,6 +30,7 @@ export class CartService {
   removeProductFromCart(product: Product) {
     const pos = this.productsFromCart.indexOf(product);
     this.productsFromCart.splice(pos, 1);
+    this.productsFromCart = [...this.productsFromCart];
     this.getCountAndTotal();
   }
 
