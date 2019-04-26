@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class OrderByPipe implements PipeTransform {
 
   transform(array: any, field: string, direction: boolean): any[] {
-    debugger
     if (direction) {
       array.sort((a: any, b: any) => {
         if (a[field] < b[field]) {

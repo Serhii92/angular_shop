@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductModel } from '../../models/product.model';
 import { ProductsArrayService } from '../../services/products-array.service';
 import { Router } from '@angular/router';
+import { CartService } from '../../../cart/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -15,7 +16,7 @@ export class ProductListComponent implements OnInit {
   constructor(
     private router: Router,
     private productsService: ProductsArrayService,
-    //private cartService: CartService
+    private cartService: CartService
   ) { }
 
   ngOnInit() {
@@ -24,7 +25,7 @@ export class ProductListComponent implements OnInit {
 
   onBuyProduct(product: ProductModel): void {
     console.log('On buy click:', product);
-    ///this.cartService.addToCart(product);
+    this.cartService.addToCart(product);
   }
 
   onDetail(product: ProductModel): void {

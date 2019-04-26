@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../../../models/product.model';
+import { ProductModel } from '../../../products/models/product.model';
 
 @Component({
   selector: 'app-cart-item',
@@ -9,12 +9,12 @@ import { Product } from '../../../models/product.model';
 export class CartItemComponent implements OnInit {
 
   @Input()
-  cartItem: Product;
+  cartItem: ProductModel;
 
   @Output()
-  removeCartItem: EventEmitter<Product> = new EventEmitter<Product>();
+  removeCartItem: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
   @Output()
-  changeQuantity: EventEmitter<Product> = new EventEmitter<Product>();
+  changeQuantity: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
 
   constructor() { }
 
@@ -26,7 +26,7 @@ export class CartItemComponent implements OnInit {
     this.removeCartItem.emit(this.cartItem);
   }
 
-  onChangeQuantity(product: Product): void {
+  onChangeQuantity(product: ProductModel): void {
     console.log('Change qty:', product);
     this.changeQuantity.emit(this.cartItem);
   }

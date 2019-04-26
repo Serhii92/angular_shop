@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { CartService } from '../../../cart.service';
-import { Product } from '../../../models/product.model';
+import { ProductModel } from '../../../products/models/product.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart-list',
@@ -9,7 +9,7 @@ import { Product } from '../../../models/product.model';
 })
 export class CartListComponent implements OnInit {
 
-  cartItems: Array<Product>;
+  cartItems: Array<ProductModel>;
   orders = ['price', 'quantity', 'name'];
   selectedOrder = 'price';
 
@@ -27,16 +27,16 @@ export class CartListComponent implements OnInit {
     return this.cartService.isCartEmpty();
   }
 
-  getProductsFromCart(): Product[] {
+  getProductsFromCart(): ProductModel[] {
     return this.cartService.getAddedProducts();
   }
 
-  onRemoveItem(product: Product): void {
+  onRemoveItem(product: ProductModel): void {
     console.log('On remove click:', product);
     this.cartService.removeProductFromCart(product);
   }
 
-  onChangeQuantity(product: Product): void {
+  onChangeQuantity(product: ProductModel): void {
     console.log('On update click:', product);
     this.cartService.updateProduct(product);
   }

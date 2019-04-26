@@ -7,11 +7,11 @@
             </option>
         </select>
         <!-- Descending:
-        <select [(ngModel)]="direction">
-            <option *ngFor="let direct of directions" [ngValue]="direction">
-                {{direct}}
-            </option>
-        </select> -->
+      <select [(ngModel)]="direction">
+          <option *ngFor="let direct of directions" [ngValue]="direction">
+              {{direct}}
+          </option>
+      </select> -->
     </div>
     <app-cart-item *ngFor="let cartItem of getProductsFromCart() | orderBy : selectedOrder : false" [cartItem]="cartItem"
         (removeCartItem)="onRemoveItem($event)" (changeQuantity)="onChangeQuantity($event)">

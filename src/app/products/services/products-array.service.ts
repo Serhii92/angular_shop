@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ProductModel } from '../models/product.model';
 import { ProductsServicesModule } from '../products-services.module';
-import { ProductCategories } from '../../product/enums/product-categories';
+import { ProductCategories } from 'src/app/products/enums/product-categories';
 
 const products = [
   new ProductModel

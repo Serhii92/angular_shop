@@ -1,4 +1,6 @@
-import { ProductCategories } from 'src/app/product/enums/product-categories';
+import { ProductCategories } from 'src/app/products/enums/product-categories';
+
+
 
 export class ProductModel {
     constructor(
