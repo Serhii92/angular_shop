@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductListComponent } from './products';
+import { ContactUsComponent } from './layout';
 
 const routes: Routes = [
-  // {
-  //   path: 'about',
-  //   component: AboutComponent
-  // },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent
+  },
   {
     path: '',
     redirectTo: '/home',
