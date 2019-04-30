@@ -1,10 +1,13 @@
-Task 3
+Task 5
 
-1. Добавил логику для очситки корзины
-2. LocalStorageService
-3. ConfigOptionsService
-4. ConstantsService
-5. GeneratorService
-6. LocalStorageService, ConfigOptionsService, ConstantsService, GeneratorService зарегистрировал в CoreModule
-7. ContactUsComponent
-8. FonstSyleDirective (изменяет размер шрифта элемента по клику)
+1. Немного отрефакторил структуру проекта, разделили на Products, Cart, Layout modules
+2. Список товаров /products-list
+
+3. Карточку товара. 
+    /product/:productID
+
+4. Добавление в корзину /cart
+
+5. Удаление из корзины
+
+6. Роутинг для Products, Cart, ContactUs
